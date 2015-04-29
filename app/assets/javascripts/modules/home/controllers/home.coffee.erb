@@ -1,5 +1,35 @@
 angular.module('home')
-.controller("HomeCtrl", [ "$scope"
-    ($scope)->
-      console.log 'home'
+.controller("HomeCtrl", [ "$scope", "SpotifyAPI"
+    ($scope, SpotifyAPI)->
+      $scope.playlist1 =
+        owner_id: 'nickcentric'
+        playlist_id: '6cWhl9uxcZQzj7ptdX4vfg'
+      $scope.playlist2 =
+        owner_id: 'spotify'
+        playlist_id: '1fUdDZLxKUAoptzMGsX1TS'
+
+      calculateWinner = ->
+        if $scope.playlist1.popularity_total > $scope.playlist2.popularity_total
+          $scope.playlist1.winner = true
+          $scope.playlist2.winner = false
+          console.log 'playlist1 wins'
+        else if $scope.playlist1.popularity_total < $scope.playlist2.popularity_total
+          $scope.playlist1.winner = false
+          $scope.playlist2.winner = true
+          console.log 'playlist2 wins'
+        else
+          $scope.playlist1.winner = false
+          $scope.playlist2.winner = false
+
+      $scope.$watch 'playlist1.playlist_id', ->
+        $scope.playlist1.tracks = null
+        SpotifyAPI.fetchPlaylist($scope.playlist1.owner_id, $scope.playlist1.playlist_id).then (playlist) ->
+          $scope.playlist1 = playlist
+          calculateWinner()
+
+      $scope.$watch 'playlist2.playlist_id', ->
+        $scope.playlist2.tracks = null
+        SpotifyAPI.fetchPlaylist($scope.playlist2.owner_id, $scope.playlist2.playlist_id).then (playlist) ->
+          $scope.playlist2 = playlist
+          calculateWinner()
 ])

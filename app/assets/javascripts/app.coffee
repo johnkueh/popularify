@@ -1,5 +1,6 @@
 angular.module('popularify',[
   'templates'
+  'spotify.api'
   'ui.router'
   'keypress'
   'capitalize'

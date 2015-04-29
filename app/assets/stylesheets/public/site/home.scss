@@ -1,11 +1,24 @@
+$spotify-green: #81b71a;
 .home {
+  .img-loader {
+    margin: 60px;
+    width: 40px;
+  }
+  .score {
+    margin-top: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    .fa-trophy {
+      color: $spotify-green;
+    }
+  }
   .paragraph {
     font-weight: 300;
     font-size: 26px;
   }
   .home-banner {
     text-align: center;
-    padding: 40px 0px;
+    padding: 40px 0 30px 0px;
     h1 {
       font-size: 60px;
       font-weight: 700;
@@ -26,12 +39,12 @@
       margin: 0 50px;
     }
     .playlist-name {
-      margin: 20px 0;
+      margin: 0 0 20px 0;
     }
     ul li.head {
       color: white;
       font-weight: bold;
-      background: #81b71a;
+      background: $spotify-green;
     }
     ul li {
       border-top: 1px solid #e1e1e1;

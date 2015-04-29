@@ -6,7 +6,7 @@
 //= require angular-rails-templates
 
 //= require app
-//# require_tree ./services
+//= require_tree ./services
 //= require_tree ./templates
 //= require_tree ./directives
 //# require_tree ./config
