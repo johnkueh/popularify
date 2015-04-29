@@ -12,11 +12,9 @@ angular.module('home')
         if $scope.playlist1.popularity_total > $scope.playlist2.popularity_total
           $scope.playlist1.winner = true
           $scope.playlist2.winner = false
-          console.log 'playlist1 wins'
         else if $scope.playlist1.popularity_total < $scope.playlist2.popularity_total
           $scope.playlist1.winner = false
           $scope.playlist2.winner = true
-          console.log 'playlist2 wins'
         else
           $scope.playlist1.winner = false
           $scope.playlist2.winner = false
