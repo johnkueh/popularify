@@ -1,0 +1,45 @@
+.home {
+  .paragraph {
+    font-weight: 300;
+    font-size: 26px;
+  }
+  .home-banner {
+    text-align: center;
+    padding: 40px 0px;
+    h1 {
+      font-size: 60px;
+      font-weight: 700;
+    }
+    p {
+      @extend .paragraph;
+    }
+    .img-logo {
+      width: 200px;
+    }
+  }
+  .home-result {
+    text-align: center;
+    p strong {
+      @extend .paragraph;
+    }
+    .result {
+      margin: 0 50px;
+    }
+    .playlist-name {
+      margin: 20px 0;
+    }
+    ul li.head {
+      color: white;
+      font-weight: bold;
+      background: #81b71a;
+    }
+    ul li {
+      border-top: 1px solid #e1e1e1;
+      border-bottom: 1px solid #e1e1e1;
+      padding: 5px 0;
+    }
+    ul li.total {
+      font-weight: bold;
+    }
+  }
+}
