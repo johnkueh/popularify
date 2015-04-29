@@ -1,3 +1,139 @@
-<div class="container">
-  <h1>Homepage</h1>
+<div class="home">
+  <section class="home-banner">
+    <div class="container">
+      <img src="http://upload.wikimedia.org/wikipedia/fr/4/4e/Spotify_2013_(logo).png" class="img-logo" />
+      <h1>Fight for your right to party.</h1>
+      <p>Hackerlabs vs SpotifyAU. Here we go!</p>
+    </div>
+  </section>
+  <section class="home-result">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="result">
+            <div class="form-group">
+              <label>Owner ID:</label>
+              <input type="text" class="form-control" placeholder="Enter Owner ID" ng-model="playlist1.ownerId"/>
+            </div>
+            <div class="form-group">
+              <label>Playlist ID:</label>
+              <input type="text" class="form-control" placeholder="Enter Playlist ID" ng-model="playlist1.playListId"/>
+            </div>
+            <p class="playlist-name">Top 20 tracks for the playlist:<br><strong>{{playlist1.name}}</strong></p>
+            <ul class="list-unstyled">
+              <li class="head">
+                <div class="row">
+                  <div class="col-md-9">
+                    Track Name
+                  </div>
+                  <div class="col-md-3">
+                    Popularity
+                  </div>
+                </div>
+              </li>
+              <li ng-repeat="track in playlist1.tracks">
+                <div class="row">
+                  <div class="col-md-9">
+                    (You Gotta ) Fight For Your Right To Party
+                  </div>
+                  <div class="col-md-3">
+                    23
+                  </div>
+                </div>
+              </li>
+              <li class="total">
+                <div class="row">
+                  <div class="col-md-9">
+                    TOTAL
+                  </div>
+                  <div class="col-md-3">
+                    928
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="result">
+            <label>Playlist ID:</label>
+            <input type="text" class="form-control" placeholder="Enter Playlist ID" />
+            <p class="playlist-name">Top 20 tracks for the playlist:<br><strong>Spotify AU Spotify AU Spotify AU Spotify AU Spotify AU</strong></p>
+            <ul class="list-unstyled">
+              <li class="head">
+                <div class="row">
+                  <div class="col-md-9">
+                    Track Name
+                  </div>
+                  <div class="col-md-3">
+                    Popularity
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-md-9">
+                    (You Gotta ) Fight For Your Right To Party
+                  </div>
+                  <div class="col-md-3">
+                    23
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-md-9">
+                    (You Gotta ) Fight For Your Right To Party
+                  </div>
+                  <div class="col-md-3">
+                    23
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-md-9">
+                    (You Gotta ) Fight For Your Right To Party
+                  </div>
+                  <div class="col-md-3">
+                    23
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-md-9">
+                    (You Gotta ) Fight For Your Right To Party
+                  </div>
+                  <div class="col-md-3">
+                    23
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="row">
+                  <div class="col-md-9">
+                    (You Gotta ) Fight For Your Right To Party
+                  </div>
+                  <div class="col-md-3">
+                    23
+                  </div>
+                </div>
+              </li>
+              <li class="total">
+                <div class="row">
+                  <div class="col-md-9">
+                    TOTAL
+                  </div>
+                  <div class="col-md-3">
+                    928
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
